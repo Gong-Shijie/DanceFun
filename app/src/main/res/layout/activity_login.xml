@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_activity"
+    tools:context="com.example.administrator.dancefun20.LoginActivity">
+
+    <EditText
+        android:id="@+id/account_Edit"
+        android:hint="account"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="120dp"
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:id="@+id/password_Edit"
+        android:hint="password"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:inputType="textPassword"
+        android:layout_below="@+id/account_Edit"
+
+        android:layout_alignStart="@+id/account_Edit"
+        android:layout_marginTop="38dp" />
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/tomenu_btn"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/loginbtn"
+        android:layout_marginTop="550dp"
+
+        />
+    <ImageView
+        android:id="@+id/tosign_btn"
+        android:layout_marginTop="700dp"
+        android:src="@drawable/tosign_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

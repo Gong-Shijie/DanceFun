@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_funmenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="#ffffffff"
+    tools:context="com.example.administrator.dancefun20.FunmenuActivity">
+
+    <ImageView
+
+        android:id="@+id/tomain_btn"
+        android:layout_marginTop="25dp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/to_menu" />
+    <ImageView
+        android:layout_marginTop="120dp"
+        android:id="@+id/menu_practice"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tomain_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/practice"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="40dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/menu_video"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/menu_practice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="40dp"
+        />
+    <ImageView
+        android:id="@+id/menu_log"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/menu_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/log"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="40dp"
+        />
+    <ImageView
+        android:id="@+id/menu_article"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/menu_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/article"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="40dp"
+        />
+    <ImageView
+        android:id="@+id/menu_play"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/menu_article"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="40dp"
+        />
+
+</RelativeLayout>
