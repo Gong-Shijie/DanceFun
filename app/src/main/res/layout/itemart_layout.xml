@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_height="wrap_content"
+        android:id="@+id/articleItem_view"
+        android:layout_width="match_parent"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        >
+
+        <androidx.percentlayout.widget.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    app:layout_marginLeftPercent="3%"
+                    app:layout_marginRightPercent="3%"
+                    android:id="@+id/article_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    />
+
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:id="@+id/flagper"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/article_photo"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        app:layout_marginLeftPercent="7%"
+                        android:id="@+id/article_content"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/flag"
+                        app:layout_marginLeftPercent="86%"
+                        android:src="@drawable/ic_heart"
+                        >
+                    </ImageView>
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/flagper"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    ></LinearLayout>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

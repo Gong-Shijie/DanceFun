@@ -1,31 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.administrator.dancefun20">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <application
+    package="com.example.dancefun30">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
-        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.NoTitleBar">
-        <activity android:name=".WelcomeActivity">
+        android:theme="@style/NoTitle"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".view.WebviewActivity"></activity>
+        <activity
+            android:name=".view.PreviewActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.Userinfo_Activity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.SignActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.MyfavorActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.MainMenuActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.LoglistActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.FunmenuActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.AriticleListActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.AddLogActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.LoopviewActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.WelcomActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".LoopviewActivity" />
-        <activity android:name=".FunmenuActivity" />
-        <activity android:name=".MainMenuActivity" />
-        <activity android:name=".SignActivity" />
-        <activity android:name=".AddLogActivity" />
-        <activity android:name=".Userinfo_Activity" />
-        <activity android:name=".LoglistActivity" />
-        <activity android:name=".AriticleListActivity" />
-        <activity android:name=".MyfavorActivity"></activity>
     </application>
 
 </manifest>

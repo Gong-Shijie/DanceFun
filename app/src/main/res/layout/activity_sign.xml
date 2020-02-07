@@ -1,57 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_sign"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="@drawable/signactivity"
-    tools:context="com.example.administrator.dancefun20.SignActivity">
+    android:background="#ffffffff"
+    tools:context=".view.SignActivity">
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/signactivity">
+        <EditText
+            android:id="@+id/signN_edit"
+            app:layout_marginTopPercent ="35%"
+            app:layout_marginLeftPercent="23%"
+            android:hint="name"
+            android:textSize="22sp"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
 
-    <EditText
-        android:id="@+id/signN_edit"
-        android:hint="name"
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="315dp"
-        android:layout_marginLeft="110dp"
-        android:inputType="textEmailAddress"
-        />
+        <EditText
+            android:id="@+id/signA_edit"
+            app:layout_marginTopPercent ="42%"
+            app:layout_marginLeftPercent="23%"
+            android:hint="account"
+            android:textSize="22sp"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
 
-    <EditText
-        android:id="@+id/signA_edit"
-        android:hint="account"
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="370dp"
-        android:layout_marginLeft="110dp"
-        android:inputType="textEmailAddress"
-        />
+        <EditText
+            android:id="@+id/signP_edit"
+            app:layout_marginTopPercent ="49%"
+            app:layout_marginLeftPercent="23%"
+            android:hint="password"
+            android:textSize="22sp"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+        <ImageView
+            android:id="@+id/signtologbtn"
+            app:layout_marginTopPercent ="58%"
+            app:layout_heightPercent="6%"
+            android:background="@drawable/signtologbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
 
-    <EditText
-        android:id="@+id/signP_edit"
-        android:hint="password"
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="429dp"
-        android:layout_marginLeft="110dp"
-        android:inputType="textPassword"
-        />
-    <Button
-        android:id="@+id/signtologbtn"
-        android:layout_marginTop="640dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="200dp"
-        android:alpha="0"
-        android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/signedbtn"
+            app:layout_marginTopPercent ="75%"
+            app:layout_heightPercent="3%"
+            android:background="@drawable/signedbtn"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+    </androidx.percentlayout.widget.PercentRelativeLayout>
 
-    <Button
-        android:id="@+id/signedbtn"
-        android:layout_marginTop="495dp"
-        android:layout_centerHorizontal="true"
-        android:layout_width="250dp"
-        android:alpha="0"
-        android:layout_height="60dp" />
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

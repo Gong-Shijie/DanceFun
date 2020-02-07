@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_userinfo_"
     android:layout_width="match_parent"
+    android:background="#ffffffff"
     android:layout_height="match_parent"
-   android:background="@drawable/user_info"
-    tools:context="com.example.administrator.dancefun20.Userinfo_Activity">
 
-<Button
-    android:id="@+id/infotomainmenu"
-    android:layout_marginTop="28dp"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:alpha="0"/>
+    tools:context=".view.Userinfo_Activity">
+<androidx.percentlayout.widget.PercentRelativeLayout
+    android:layout_width="match_parent"
+    android:background="@drawable/user_info"
+    android:layout_height="match_parent">
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/infotomainmenu"
+        android:background="@drawable/ic_back"
+        app:layout_marginTopPercent="4%"
+        android:layout_marginLeft="4dp"
+        android:adjustViewBounds="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+
+    </ImageView>
+    <LinearLayout
+
+        app:layout_marginTopPercent="52%"
+        app:layout_marginLeftPercent="15%"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="亲爱的用户，你一共使用软件 1 次"></TextView>
+
+        <TextView
+            android:layout_marginTop="20dp"
+
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="记录日志 1 篇"></TextView>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="坚持练习 0 次！"></TextView>
+    </LinearLayout>
+</androidx.percentlayout.widget.PercentRelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

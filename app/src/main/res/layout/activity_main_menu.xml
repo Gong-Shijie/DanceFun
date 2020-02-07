@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginTop="4dp"
-    android:id="@+id/activity_main_menu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_menu"
+    android:background="#ffffffff"
+    tools:context=".view.MainMenuActivity">
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/main_menu"
+        android:layout_height="match_parent">
 
-    tools:context="com.example.administrator.dancefun20.MainMenuActivity">
+        <Button
+            android:id="@+id/backFunbtn"
+            android:background="@drawable/ic_back"
+            app:layout_marginTopPercent="4%"
+            android:layout_marginLeft="4dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+        </Button>
 
-<ImageView
-    android:id="@+id/backFunbtn"
-    android:layout_marginTop="10dp"
-    android:src="@drawable/back"
-    android:layout_width="50dp"
-    android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/mainmenu_1"
+            app:layout_marginTopPercent="57%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/mainmenu1"
+            />
 
-    <ImageView
-        android:layout_marginTop="450dp"
-        android:id="@+id/mainmenu_1"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/mainmenu1"
-        />
+        <ImageView
+            android:id="@+id/mainmenu_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_marginTopPercent="68%"
+            android:src="@drawable/mainmenu2"
+            />
 
-    <ImageView
-        android:id="@+id/mainmenu_2"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:adjustViewBounds="true"
-        android:layout_below="@id/mainmenu_1"
-        android:src="@drawable/mainmenu2"
-        />
-
-    <ImageView
-        android:id="@+id/mainmenu_3"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:adjustViewBounds="true"
-        android:layout_below="@id/mainmenu_2"
-        android:src="@drawable/mainmenu3"
-        />
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/mainmenu_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_marginTopPercent="80%"
+            android:src="@drawable/mainmenu3"
+            />
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

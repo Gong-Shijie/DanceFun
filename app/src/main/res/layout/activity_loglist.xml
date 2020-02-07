@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_loglist"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="#ffffffff"
-    tools:context="com.example.administrator.dancefun20.LoglistActivity">
+    android:background="#ffffffff"
+    tools:context=".view.LoglistActivity">
 
-    <Button
-        android:id="@+id/loglisttomenu"
-        android:layout_marginTop="28dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:alpha="0"/>
-    <ImageView
-        android:src="@drawable/loglisthead"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"/>
-    <ImageView
-        android:id="@+id/toaddLog"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/add_log"
-        android:adjustViewBounds="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-</RelativeLayout>
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/loglisttomenu"
+            android:background="@drawable/ic_back"
+            app:layout_marginTopPercent="4%"
+            android:layout_marginLeft="4dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+        </Button>
+        <ImageView
+            android:id="@+id/loglisthead"
+            android:src="@drawable/loglisthead"
+            android:layout_alignParentTop="true"
+            app:layout_heightPercent="20%"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/log_view"
+            android:layout_below="@id/loglisthead"
+            android:layout_height="fill_parent"
+            android:layout_width="match_parent" />
+        <Button
+            android:id="@+id/toaddLog"
+            android:background="@drawable/ic_add_"
+            app:layout_marginTopPercent ="90%"
+            app:layout_marginLeftPercent ="82%"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+        </Button>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

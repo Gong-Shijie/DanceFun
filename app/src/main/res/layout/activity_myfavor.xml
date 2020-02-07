@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_myfavor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="#ffffffff"
-    tools:context="com.example.administrator.dancefun20.MyfavorActivity">
+    android:background="#ffffffff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.MyfavorActivity">
+<androidx.percentlayout.widget.PercentRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/myfavortomenu"
-        android:layout_marginTop="20dp"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:alpha="0"
-        />
     <ImageView
         android:src="@drawable/myfavor"
+        android:layout_alignParentTop="true"
+        app:layout_heightPercent="20%"
         android:adjustViewBounds="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ImageView>
+    <Button
+        android:id="@+id/myfavortomenu"
+        android:background="@drawable/ic_back"
+        app:layout_marginTopPercent="4%"
+        android:layout_marginLeft="4dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp">
+    </Button>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favArticle_view"
+        android:layout_marginTop="160dp"
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent" />
+</androidx.percentlayout.widget.PercentRelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

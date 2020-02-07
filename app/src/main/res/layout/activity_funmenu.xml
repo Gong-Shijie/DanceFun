@@ -1,72 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_funmenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:background="#ffffffff"
-    tools:context="com.example.administrator.dancefun20.FunmenuActivity">
+    android:id="@+id/drawer_layout"
+    tools:openDrawer="start"
+    android:background="#ffffffff">
 
-    <ImageView
 
-        android:id="@+id/tomain_btn"
-        android:layout_marginTop="25dp"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-        android:src="@drawable/to_menu" />
+    <androidx.percentlayout.widget.PercentRelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<!--    <android.support.design.widget.AppBarLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_marginTop="30dp"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff"
+             />
+<!--    </android.support.design.widget.AppBarLayout>-->
     <ImageView
-        android:layout_marginTop="120dp"
         android:id="@+id/menu_practice"
+        app:layout_marginTopPercent ="22%"
+        app:layout_heightPercent="9%"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/tomain_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/practice"
-        android:adjustViewBounds="true"
-        android:layout_marginBottom="40dp"
         />
 
 
     <ImageView
         android:id="@+id/menu_video"
+        app:layout_heightPercent="9%"
+        app:layout_marginTopPercent ="34%"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/menu_practice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/camera"
-        android:adjustViewBounds="true"
-        android:layout_marginBottom="40dp"
         />
     <ImageView
         android:id="@+id/menu_log"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/menu_video"
+        app:layout_marginTopPercent ="45%"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_heightPercent="9%"
         android:src="@drawable/log"
-        android:adjustViewBounds="true"
-        android:layout_marginBottom="40dp"
         />
     <ImageView
         android:id="@+id/menu_article"
+        app:layout_marginTopPercent ="57%"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/menu_log"
         android:layout_width="wrap_content"
+        app:layout_heightPercent="9%"
         android:layout_height="wrap_content"
         android:src="@drawable/article"
-        android:adjustViewBounds="true"
-        android:layout_marginBottom="40dp"
         />
     <ImageView
         android:id="@+id/menu_play"
+        app:layout_marginTopPercent ="69%"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/menu_article"
         android:layout_width="wrap_content"
+        app:layout_heightPercent="9%"
         android:layout_height="wrap_content"
         android:src="@drawable/play"
-        android:adjustViewBounds="true"
-        android:layout_marginBottom="40dp"
         />
 
-</RelativeLayout>
+</androidx.percentlayout.widget.PercentRelativeLayout>
+<!--    must be the last child of drawer-->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
